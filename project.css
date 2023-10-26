@@ -1,0 +1,168 @@
+@import url("https://fonts.googleapis.com/css2?family=League+Spartan:wght@700&display=swap");
+:root {
+  --firstThem-bg: hsl(222, 26%, 31%);
+  --one-toggkeys-bg: hsl(223, 31%, 20%);
+  --one-result-bgcolor: hsl(224, 36%, 15%);
+  --res-delbgcolor1: hsl(225, 21%, 49%);
+  --resdel-shadowcol1: hsl(224, 28%, 35%);
+  --equal-toggler1: hsl(6, 63%, 50%);
+  --equal-shadowcol1: hsl(6, 70%, 34%);
+  --one-keybgcolor: hsl(30, 25%, 89%);
+  --one-keyshadowcol: hsl(28, 16%, 65%);
+  --one-numberscol: hsl(221, 14%, 31%);
+  --equalresdel-color: hsl(0, 0%, 100%);
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "League Spartan", sans-serif;
+}
+html {
+  width: 100%;
+  height: 100%;
+}
+body {
+  font-family: "League Spartan", sans-serif;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--firstThem-bg);
+}
+input {
+  height: 12px;
+  width: 12px;
+  appearance: none;
+  background-color: var(--equal-toggler1);
+  border-radius: 50%;
+  opacity: 0;
+}
+input:hover {
+  cursor: pointer;
+}
+.tri-state-toggle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50px;
+  background-color: var(--one-toggkeys-bg);
+  width: 45px;
+  height: 18px;
+}
+#one {
+  opacity: 1;
+}
+
+#parent {
+  width: 30%;
+  height: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+#labelPlusToggles {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  column-gap: 15px;
+  text-transform: uppercase;
+}
+.theme {
+  font-size: x-small;
+  height: 0;
+  color: var(--equalresdel-color);
+}
+.head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 5%;
+  color: var(--equalresdel-color);
+}
+.calcLogo {
+  font-size: x-large;
+  font-weight: bolder;
+  height: 33px;
+  color: var(--equalresdel-color);
+}
+.labels {
+  display: flex;
+  justify-content: space-around;
+  font-size: x-small;
+  color: var(--equalresdel-color);
+  width: 48px;
+}
+.result {
+  height: 20%;
+  background-color: var(--one-result-bgcolor);
+  border-radius: 10px;
+  font-weight: bolder;
+  color: var(--equalresdel-color);
+  padding: 20px;
+  font-size: xxx-large;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+#numbers {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 15px 15px;
+  height: 70%;
+  background-color: var(--one-toggkeys-bg);
+  padding: 15px;
+  border-radius: 10px;
+}
+#resetBtn {
+  grid-column: span 2;
+  background-color: var(--res-delbgcolor1);
+  color: var(--equalresdel-color);
+  font-size: large;
+  text-transform: uppercase;
+  box-shadow: 0 4px 0 0 var(--resdel-shadowcol1);
+}
+
+#equalBtn {
+  grid-column: span 2;
+  background-color: var(--equal-toggler1);
+  color: var(--equalresdel-color);
+  font-weight: lighter;
+  font-size: large;
+  box-shadow: 0px 4px 0px 0px var(--equal-shadowcol1);
+}
+#deleteBtn {
+  color: var(--equalresdel-color);
+  font-size: large;
+  background-color: var(--res-delbgcolor1);
+  box-shadow: 0px 4px 0px 0px var(--resdel-shadowcol1);
+  text-transform: uppercase;
+}
+.buttons {
+  border-radius: 8px;
+  border: none;
+  font-size: 32px;
+  font-weight: bold;
+  height: 47px;
+  color: var(--one-numberscol);
+  background-color: var(--one-keybgcolor);
+  box-shadow: 0 4px 0 0 var(--one-keyshadowcol);
+}
+
+@media (max-width: 375px) {
+  #parent {
+    width: 80%;
+  }
+  .buttons {
+    height: 55px;
+  }
+  .result {
+    height: 16%;
+  }
+  #numbers {
+    height: 74%;
+  }
+}
